@@ -25,6 +25,7 @@ import android.util.Log;
 
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
+import org.lineageos.settings.haptic.HapticUtils;
 import org.lineageos.settings.utils.FileUtils;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
@@ -47,6 +48,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         Log.i(TAG, "Boot completed, starting services");
 	DozeUtils.onBootCompleted(context);
         ThermalUtils.startService(context);
+	HapticUtils.restoreLevel(context);
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 

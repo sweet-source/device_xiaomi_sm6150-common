@@ -51,4 +51,12 @@
     <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value. Which helps in improving visibility in direct sunlight</string>
     <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
 
+    <!-- Haptic Level Settings -->
+    <string name="haptic_title">Haptic feedback</string>
+    <string name="haptic_warning">Setting-up haptic level too high may cause permanent hardware damage, use at your own risk</string>
+    <string name="haptic_summary">Customize vibration intensity</string>
+    <string name="haptic_level_title">Level</string>
+    <string name="haptic_level_summary">Amount of vibration intensity</string>
+    <string name="haptic_level_summary_incompatible">Feature not supported</string>
+
 </resources>
