@@ -128,6 +128,21 @@ on boot
     enable vendor.dataqti
     enable vendor.dataadpl
 
+    # Allow system to modify exposure adjustment state
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_bl
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_bl
+
+    #chown/chmod input_suspend node
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0666 /sys/class/power_supply/battery/input_suspend
+
+    # Optimize I/O scheduler
+    write /sys/block/mmcblk0/queue/scheduler "noop"
+    write /sys/block/mmcblk1/queue/scheduler "noop"
+
+    # Disable kernel logging for better performance
+    write /proc/sys/kernel/printk "0 0 0 0"
+
 on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
