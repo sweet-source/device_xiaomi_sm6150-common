@@ -142,6 +142,9 @@ on boot
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_bl
     chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_bl
 
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm
+
     #chown/chmod input_suspend node
     chown system system /sys/class/power_supply/battery/input_suspend
     chmod 0666 /sys/class/power_supply/battery/input_suspend
