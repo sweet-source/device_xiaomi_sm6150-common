@@ -46,6 +46,12 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
+    # Disable thermal throttling for performance
+    write /sys/module/msm_thermal/core_control/enabled 0
+
+    # Set low memory killer minfree values
+    write /sys/module/lowmemorykiller/parameters/minfree "15360,20480,25600,30720,35840,40960"
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
