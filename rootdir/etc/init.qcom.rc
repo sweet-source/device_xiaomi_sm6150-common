@@ -52,6 +52,10 @@ on init
     # Set low memory killer minfree values
     write /sys/module/lowmemorykiller/parameters/minfree "15360,20480,25600,30720,35840,40960"
 
+    # Configure thermal trip points
+    write /sys/class/thermal/thermal_zone0/trip_point_0_temp 95
+    write /sys/class/thermal/thermal_zone0/trip_point_1_temp 100
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
