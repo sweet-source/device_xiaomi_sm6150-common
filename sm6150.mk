@@ -128,7 +128,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gralloc.sm6150 \
     hwcomposer.sm6150 \
-    memtrack.sm6150
+    memtrack.sm6150 \
+    libgui_vendor
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor
