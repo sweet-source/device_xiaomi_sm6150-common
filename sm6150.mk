@@ -452,6 +452,7 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
     libwpa_client \
+    libcld80211 \
     WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
